@@ -6,6 +6,8 @@ services:
         ports:
             - 3306:3306
         restart: always
+        volumes:
+            - ./db_storage:/var/lib/mysql
         environment:
           MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
           MYSQL_DATABASE: ${MYSQL_DATABASE}
